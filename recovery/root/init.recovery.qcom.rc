@@ -44,14 +44,14 @@ on post-fs
 on boot
     start health-hal-2-1
 
-service set_permissive /system/bin/set_permissive.sh
+service set_permissive /vendor/bin/set_permissive.sh
     user root
     group root
     disabled
     oneshot
     seclabel u:r:recovery:s0
 
-service runatboot /system/bin/runatboot.sh
+service runatboot /vendor/bin/runatboot.sh
     user root
     group root
     disabled
